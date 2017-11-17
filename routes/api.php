@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['prefix' => 'v1'], function () {
+Route::group(['prefix' => 'v1', 'middleware' => 'ajax.headers'], function () {
     Route::get('groups', 'Api\\CompletedTaskController@index');
 });
