@@ -9,4 +9,8 @@ class Task extends Model
     protected $fillable = [
         'icon', 'title', 'description'
     ];
+
+    protected $casts = [
+        'is_completed' => 'boolean',
+    ];
 }
