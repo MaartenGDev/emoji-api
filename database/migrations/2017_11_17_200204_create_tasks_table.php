@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->string('icon');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
 
             $table->integer('group_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('groups');

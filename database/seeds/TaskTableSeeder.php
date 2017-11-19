@@ -23,14 +23,14 @@ class TaskTableSeeder extends Seeder
     private function getTasksForGroup($groupId){
         return collect([
             [
-                'icon' => '😱',
-                'title' => 'Opdracht 1',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '😂',
+                'title' => 'Wie ben ik',
+                'description' => 'Elke speler krijgt een papiertje op de rug geplakt met daarop een emoji dat een object representeert. Het gehele team moet zo snel mogelijk uitzoeken welk object hij/zij is. <br /><br /> Het is natuurlijk niet te bedoeling om te vragen: "Wie ben ik ?", maar wel: "Ben ik een man of een vrouw, een Kip, een flat, een kunstenaar, een hipster?"'
             ],
             [
-                'icon' => '🤠',
-                'title' => 'Opdracht 2',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '🎤',
+                'title' => 'Guess the song',
+                'description' => 'Er worden een aantal liedjes afgespeeld en welk groepje de titel  van het liedje het eerste raad wint.'
             ],
             [
                 'icon' => '🙄',
