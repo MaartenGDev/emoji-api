@@ -22,7 +22,7 @@ class CreateTasksTable extends Migration
             $table->integer('group_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('groups');
 
-            $table->boolean('is_completed')->default(false);
+            $table->integer('position')->default(null)->nullable();
 
             $table->timestamps();
         });
