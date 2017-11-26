@@ -16,6 +16,6 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'v1', 'middleware' => ['ajax.headers']], function () {
     Route::options('/{any}', function(){ return ''; })->where('any', '.*');
-    Route::get('groups', 'Api\\GroupTaskController@index');
-    Route::patch('tasks/{task}', 'Api\\GroupTaskController@update');
+    Route::resource('groups', 'Api\\GroupController');
+    Route::resource('tasks', 'Api\\TaskController');
 });
