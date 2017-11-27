@@ -33,34 +33,34 @@ class TaskTableSeeder extends Seeder
                 'description' => 'Er worden een aantal liedjes afgespeeld en welk groepje de titel  van het liedje het eerste raad wint.'
             ],
             [
-                'icon' => '🙄',
-                'title' => 'Opdracht 3',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '⏰',
+                'title' => 'Kahoot!',
+                'description' => 'De school klasieker, kahoot! We gaan met z\'n allen kahoot spelen.'
             ],
             [
-                'icon' => '👽',
-                'title' => 'Opdracht 4',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '🎥',
+                'title' => 'Raad de film',
+                'description' => 'Er worden een aantal trailers van bekende films afgespeeld en het groepje dat als eerste de film raad krijgt een punt.'
             ],
             [
-                'icon' => '😡',
-                'title' => 'Opdracht 5',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '🌄',
+                'title' => 'Emoji Puzzel',
+                'description' => 'Ieder groepje krijgt een puzzel van een emoji en de punten worden op basis van stelheid uitgedeeld.'
             ],
             [
-                'icon' => '🎃',
-                'title' => 'Opdracht 6',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '💩',
-                'title' => 'Opdracht 7',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '🤑',
+                'title' => 'Speurtocht',
+                'description' => 'Volg de onderstaande route(begin bij blokhut uitgang) en vindt de schat. <br /><br /> 👆 25m<br />👈 100m <br />👉 30m <br />👈 75m <br />👉 50m<br />👆 100m<br />👈 25m<br /><br />💰 profit'
             ],
             [
                 'icon' => '🤖',
-                'title' => 'Opdracht 8',
-                'description' => 'Hier komt de omschrijving'
+                'title' => 'Emoji Zin',
+                'description' => 'Hieronder staan verschillende zinnen, vertaal deze in emoji\'s en laat een teamgenoot deze weer terug vertalen naar tekst. <br /><br />1. Ik pas laat thuis, zou je voor mij boodschappen kunnen doen en de kinderen naar voetbal kunnen brengen?<br />2. Ik heb vandaag nog lang school lijkt het je niet wat om vanavond naar de film te gaan en daarna wat te eten? '
+            ],
+            [
+                'icon' => '💥',
+                'title' => 'Hoe loopt het af?',
+                'description' => 'Er worden een aantal filmpjes getoond en het team dat het einde goed raad krijgt een punt.'
             ],
             [
                 'icon' => '🐼',
