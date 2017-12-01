@@ -13,14 +13,15 @@ class TaskTableSeeder extends Seeder
 
     public function run()
     {
-        $tasksForAllGroups = collect([1,2,3])->flatMap(function($groupId){
+        $tasksForAllGroups = collect([1, 2, 3])->flatMap(function ($groupId) {
             return $this->getTasksForGroup($groupId);
         })->toArray();
 
         DB::table('tasks')->insert($tasksForAllGroups);
     }
 
-    private function getTasksForGroup($groupId){
+    private function getTasksForGroup($groupId)
+    {
         return collect([
             [
                 'icon' => '😂',
@@ -55,7 +56,7 @@ class TaskTableSeeder extends Seeder
             [
                 'icon' => '🤖',
                 'title' => 'Emoji Zin',
-                'description' => 'Hieronder staan verschillende zinnen, vertaal deze in emoji\'s en laat een teamgenoot deze weer terug vertalen naar tekst. <br /><br />1. Ik pas laat thuis, zou je voor mij boodschappen kunnen doen en de kinderen naar voetbal kunnen brengen?<br />2. Ik heb vandaag nog lang school lijkt het je niet wat om vanavond naar de film te gaan en daarna wat te eten? '
+                'description' => 'Hieronder staan verschillende zinnen, vertaal deze in emoji\'s en laat een teamgenoot deze weer terug vertalen naar tekst. <br /><br />1. Ik ben pas laat thuis, zou je voor mij de boodschappen kunnen doen en de kinderen naar voetbal kunnen brengen?<br />2. Ik heb vanavond nog niks gepland, lijkt je het niet wat om vanavond naar de film te gaan en daarna wat te eten? <br /> 3. <br /> Draai een keer in het rond<br />Stamp met je voeten op de grond<br />Zwaai je armen in de lucht<br />Ga nu zitten met een zucht<br />Stap nu rond als een gans <br />Zo gaat de kabouter dans <br> 4. <br /> welkom welkom<br />bij de 3 biggetjes<br />welkom welkom<br />wat hebben we plezier<br />welkom welkom<br />bij de 3 biggetjes<br />kom maar snel naar hier '
             ],
             [
                 'icon' => '💥',
@@ -63,41 +64,16 @@ class TaskTableSeeder extends Seeder
                 'description' => 'Er worden een aantal filmpjes getoond en het team dat het einde goed raad krijgt een punt.'
             ],
             [
-                'icon' => '🐼',
-                'title' => 'Opdracht 9',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '🌚',
-                'title' => 'Opdracht 10',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '🌍',
-                'title' => 'Opdracht 11',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '🌈',
-                'title' => 'Opdracht 12',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '☃️',
-                'title' => 'Opdracht 13',
-                'description' => 'Hier komt de omschrijving'
-            ],
-            [
-                'icon' => '🥐',
-                'title' => 'Opdracht 14',
-                'description' => 'Hier komt de omschrijving'
+                'icon' => '⚽',
+                'title' => 'Voetbal/Trefbal',
+                'description' => 'We gaan voetballen/trefballen.'
             ],
             [
                 'icon' => '🍩',
-                'title' => 'Opdracht 15',
-                'description' => 'Hier komt de omschrijving'
+                'title' => 'Pauze!',
+                'description' => 'Tijd voor 🍹 en 🍪'
             ],
-        ])->map(function($task) use ($groupId) {
+        ])->map(function ($task) use ($groupId) {
             return array_merge($task, ['group_id' => $groupId]);
         });
     }
