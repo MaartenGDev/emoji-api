@@ -51,7 +51,7 @@ class TaskTableSeeder extends Seeder
             [
                 'icon' => '🤑',
                 'title' => 'Speurtocht',
-                'description' => 'Volg de onderstaande route(begin bij blokhut uitgang) en vindt de schat. <p>Team A</p>👆 25m<br />👈 100m <br />👉 30m <br />👈 75m <br />👉 50m<br />👆 100m<br />👈 25m <p>Team B</p>👆 100m<br />👈 25m <br />👆 80m <br />👉 30m <br />👉 50m<br />👆 100m<br />👈 25m <p>Team C</p>👆 25m<br />👉 50m<br />👆 100m <br />👈 30m <br />👆 75m <br />👈 100m<br />👆 50m'
+                'description' => 'Volg de onderstaande route(begin bij blokhut uitgang) en vindt de schat. <br /><br /><p>Team A</p><br />👆 25m<br />👈 100m <br />👉 30m <br />👈 75m <br />👉 50m<br />👆 100m<br />👈 25m <br /><p>Team B</p><br />👆 100m<br />👈 25m <br />👆 80m <br />👉 30m <br />👉 50m<br />👆 100m<br />👈 25m <br /><p>Team C</p><br />👆 25m<br />👉 50m<br />👆 100m <br />👈 30m <br />👆 75m <br />👈 100m<br />👆 50m'
             ],
             [
                 'icon' => '🤖',
