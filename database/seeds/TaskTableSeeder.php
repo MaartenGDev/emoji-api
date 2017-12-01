@@ -51,12 +51,12 @@ class TaskTableSeeder extends Seeder
             [
                 'icon' => '🤑',
                 'title' => 'Speurtocht',
-                'description' => 'Volg de onderstaande route(begin bij blokhut uitgang) en vindt de schat. <br /><br /> 👆 25m<br />👈 100m <br />👉 30m <br />👈 75m <br />👉 50m<br />👆 100m<br />👈 25m<br /><br />💰 profit'
+                'description' => 'Volg de onderstaande route(begin bij blokhut uitgang) en vindt de schat. <p>Team A</p>👆 25m<br />👈 100m <br />👉 30m <br />👈 75m <br />👉 50m<br />👆 100m<br />👈 25m <p>Team B</p>👆 100m<br />👈 25m <br />👆 80m <br />👉 30m <br />👉 50m<br />👆 100m<br />👈 25m <p>Team C</p>👆 25m<br />👉 50m<br />👆 100m <br />👈 30m <br />👆 75m <br />👈 100m<br />👆 50m'
             ],
             [
                 'icon' => '🤖',
                 'title' => 'Emoji Zin',
-                'description' => 'Hieronder staan verschillende zinnen, vertaal deze in emoji\'s en laat een teamgenoot deze weer terug vertalen naar tekst. <br /><br />1. Ik ben pas laat thuis, zou je voor mij de boodschappen kunnen doen en de kinderen naar voetbal kunnen brengen?<br />2. Ik heb vanavond nog niks gepland, lijkt je het niet wat om vanavond naar de film te gaan en daarna wat te eten? <br /> 3. <br /> Draai een keer in het rond<br />Stamp met je voeten op de grond<br />Zwaai je armen in de lucht<br />Ga nu zitten met een zucht<br />Stap nu rond als een gans <br />Zo gaat de kabouter dans <br> 4. <br /> welkom welkom<br />bij de 3 biggetjes<br />welkom welkom<br />wat hebben we plezier<br />welkom welkom<br />bij de 3 biggetjes<br />kom maar snel naar hier '
+                'description' => 'Hieronder staan verschillende zinnen, vertaal deze in emoji\'s en laat een teamgenoot deze weer terug vertalen naar tekst. <br /><br />1. Ik ben pas laat thuis, zou je voor mij de boodschappen kunnen doen en de kinderen naar voetbal kunnen brengen?<br />2. Ik heb vanavond nog niks gepland, lijkt je het niet wat om vanavond naar de film te gaan en daarna wat te eten? <br /> 3. <br /> Draai een keer in het rond<br />Stamp met je voeten op de grond<br />Zwaai je armen in de lucht<br />Ga nu zitten met een zucht<br />Stap nu rond als een gans <br />Zo gaat de kabouter dans <br /> <br />4. <br /> welkom welkom<br />bij de 3 biggetjes<br />welkom welkom<br />wat hebben we plezier<br />welkom welkom<br />bij de 3 biggetjes<br />kom maar snel naar hier '
             ],
             [
                 'icon' => '💥',
