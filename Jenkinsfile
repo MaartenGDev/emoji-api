@@ -12,7 +12,7 @@ pipeline {
        stage('Install dependencies'){
             steps {
                 sh 'apt-get update'
-                sh 'apt-get install gnupg'
+                sh 'apt-get install gnupg -y'
                 sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
                 sh 'composer self-update'
                 sh 'curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh'
