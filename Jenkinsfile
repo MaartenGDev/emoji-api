@@ -14,9 +14,9 @@ pipeline {
                 sh 'curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer'
                 sh 'composer self-update'
                 sh 'curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh'
-                sh 'sudo bash nodesource_setup.sh'
-                sh 'sudo apt-get install nodejs'
-                sh 'sudo apt-get install build-essential'
+                sh 'bash nodesource_setup.sh'
+                sh 'apt-get install nodejs'
+                sh 'apt-get install build-essential'
             }
         }
         stage('Clear cache'){
