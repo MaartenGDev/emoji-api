@@ -11,7 +11,7 @@ pipeline {
     stages {
        stage('Install dependencies'){
             steps {
-                sh 'curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer'
+                sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
                 sh 'composer self-update'
                 sh 'curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh'
                 sh 'bash nodesource_setup.sh'
