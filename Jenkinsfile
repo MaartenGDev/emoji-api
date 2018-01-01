@@ -11,6 +11,8 @@ pipeline {
     stages {
        stage('Install dependencies'){
             steps {
+                sh 'apt-get install php-zip'
+                sh 'apt-get install php-mcrypt'
                 sh 'apt-get update'
                 sh 'apt-get install gnupg -y'
                 sh 'apt-get install git -y'
