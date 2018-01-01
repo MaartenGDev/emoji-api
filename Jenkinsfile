@@ -17,8 +17,8 @@ pipeline {
                 sh 'composer self-update'
                 sh 'curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh'
                 sh 'bash nodesource_setup.sh'
-                sh 'apt-get install nodejs'
-                sh 'apt-get install build-essential'
+                sh 'apt-get install nodejs -y'
+                sh 'apt-get install build-essential -y'
             }
         }
         stage('Clear cache'){
