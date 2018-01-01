@@ -12,7 +12,6 @@ pipeline {
        stage('Install dependencies'){
             steps {
                 sh 'apt-get update'
-                sh 'apt-get upgrade -y'
                 sh 'apt-get install gnupg'
                 sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
                 sh 'composer self-update'
