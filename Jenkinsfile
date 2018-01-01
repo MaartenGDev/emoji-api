@@ -21,6 +21,13 @@ pipeline {
                 sh 'apt-get install build-essential -y'
             }
         }
+
+        stage('Install composer dependencies'){
+                steps {
+                    sh 'composer install --optimize-autoloader'
+                }
+        }
+
         stage('Clear cache'){
             steps {
                 sh 'php artisan cache:clear'
@@ -35,7 +42,6 @@ pipeline {
 
         stage('Warm up cache'){
             steps {
-                sh 'composer install --optimize-autoloader'
                 sh 'php artisan config:cache'
                 sh 'php artisan route:cache'
             }
