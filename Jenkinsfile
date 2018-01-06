@@ -1,34 +1,19 @@
 pipeline {
-    agent { docker 'php:latest' }
+    agent { label 'webserver' }
 
     environment {
         PROD_USER = credentials('PROD_USER')
         PROD_HOST_IP = credentials('PROD_HOST_IP')
         PROD_SSH_KEY_PATH = credentials('PROD_SSH_KEY_PATH')
-        RELEASE_DOMAIN = 'emoji-api.maartendev.me'
+        RELEASE_DOMAIN = 'emoji-api.maartendev.me',
+        DEPLOY_PATH = "/var/www/${RELEASE_DOMAIN}"
     }
 
     stages {
-       stage('Install dependencies'){
-            steps {
-                sh 'apt-get install php-zip'
-                sh 'apt-get install php-mcrypt'
-                sh 'apt-get update'
-                sh 'apt-get install gnupg -y'
-                sh 'apt-get install git -y'
-                sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
-                sh 'composer self-update'
-                sh 'curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh'
-                sh 'bash nodesource_setup.sh'
-                sh 'apt-get install nodejs -y'
-                sh 'apt-get install build-essential -y'
-            }
-        }
-
         stage('Install composer dependencies'){
-                steps {
-                    sh 'composer install --optimize-autoloader'
-                }
+            steps {
+                sh 'composer install --optimize-autoloader'
+            }
         }
 
         stage('Clear cache'){
@@ -58,12 +43,9 @@ pipeline {
         }
 
         stage('deploy'){
-            agent {
-                label 'master'
-            }
             steps {
-                sh "ssh -o StrictHostKeyChecking=no ${PROD_USER}@${PROD_HOST_IP} -i ${PROD_SSH_KEY_PATH} 'rm -rf /var/www/${RELEASE_DOMAIN}/*'"
-                sh "scp -o StrictHostKeyChecking=no -r -i ${PROD_SSH_KEY_PATH} . ${PROD_USER}@${PROD_HOST_IP}:/var/www/${RELEASE_DOMAIN}/"
+                sh "rm -rf ${DEPLOY_PATH}/*"
+                sh "cp -r ${WORKSPACE}/* ${RELEASE_DOMAIN}/*"
             }
         }
     }
