@@ -22,11 +22,6 @@ pipeline {
                 sh 'php artisan config:clear'
             }
         }
-        stage('Run migrations'){
-            steps {
-                sh 'php artisan migrate --force'
-            }
-        }
 
         stage('Warm up cache'){
             steps {
