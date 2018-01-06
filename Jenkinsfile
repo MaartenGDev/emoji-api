@@ -5,7 +5,7 @@ pipeline {
         PROD_USER = credentials('PROD_USER')
         PROD_HOST_IP = credentials('PROD_HOST_IP')
         PROD_SSH_KEY_PATH = credentials('PROD_SSH_KEY_PATH')
-        RELEASE_DOMAIN = 'emoji-api.maartendev.me',
+        RELEASE_DOMAIN = 'emoji-api.maartendev.me'
         DEPLOY_PATH = "/var/www/${RELEASE_DOMAIN}"
     }
 
