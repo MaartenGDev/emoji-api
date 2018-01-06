@@ -45,7 +45,7 @@ pipeline {
         stage('deploy'){
             steps {
                 sh "rm -rf ${DEPLOY_PATH}/*"
-                sh "cp -r ${WORKSPACE}/* ${RELEASE_DOMAIN}/*"
+                sh "cp -r ${WORKSPACE}/* ${DEPLOY_PATH}/*"
             }
         }
     }
