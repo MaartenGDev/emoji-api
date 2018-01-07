@@ -19,6 +19,7 @@ pipeline {
                 sh 'sed -i -e "s/DB_DATABASE=homestead/DB_DATABASE=${EMOJI_API_DB_NAME}/g" .env'
                 sh 'sed -i -e "s/DB_USERNAME=homestead/DB_USERNAME=${EMOJI_API_DB_USER}/g" .env'
                 sh 'sed -i -e "s/DB_PASSWORD=secret/DB_PASSWORD=\"${EMOJI_API_DB_PASSWORD}\"/g" .env'
+                sh 'chown -R www-data:www-data storage/'
             }
         }
         stage('Install composer dependencies'){
