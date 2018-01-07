@@ -19,7 +19,7 @@ pipeline {
                 sh 'sed -i -e "s/DB_DATABASE=homestead/DB_DATABASE=${EMOJI_API_DB_NAME}/g" .env'
                 sh 'sed -i -e "s/DB_USERNAME=homestead/DB_USERNAME=${EMOJI_API_DB_USER}/g" .env'
                 sh 'sed -i -e "s/DB_PASSWORD=secret/DB_PASSWORD=\"${EMOJI_API_DB_PASSWORD}\"/g" .env'
-                sh 'sudo chown -R www-data:www-data storage/'
+                sh "sudo chown -R www-data:${PROD_USER} storage/"
             }
         }
         stage('Install composer dependencies'){
@@ -37,7 +37,7 @@ pipeline {
 
         stage('Run migrations'){
             steps {
-                sh 'php artisan migrate --seed --force'
+                sh 'php artisan migrate:refresh --seed --force'
              }
         }
 
