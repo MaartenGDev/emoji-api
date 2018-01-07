@@ -15,9 +15,9 @@ pipeline {
     stages {
       stage('Configure enviroment variables for application'){
             steps {
-                sh 'sed -i -e "s/DB_DATABASE=/DB_DATABASE=${EMOJI_API_DB_NAME}/g" "${DEPLOY_PATH}/.env"
-                sh 'sed -i -e "s/DB_USERNAME=/DB_USERNAME=${EMOJI_API_DB_USER}/g" "${DEPLOY_PATH}/.env"
-                sh 'sed -i -e "s/DB_PASSWORD=/DB_PASSWORD=${EMOJI_API_DB_PASSWORD}/g" "${DEPLOY_PATH}/.env"
+                sh 'sed -i -e "s/DB_DATABASE=/DB_DATABASE=${EMOJI_API_DB_NAME}/g" "${DEPLOY_PATH}/.env"'
+                sh 'sed -i -e "s/DB_USERNAME=/DB_USERNAME=${EMOJI_API_DB_USER}/g" "${DEPLOY_PATH}/.env"'
+                sh 'sed -i -e "s/DB_PASSWORD=/DB_PASSWORD=${EMOJI_API_DB_PASSWORD}/g" "${DEPLOY_PATH}/.env"'
             }
         }
         stage('Install composer dependencies'){
