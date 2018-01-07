@@ -34,6 +34,12 @@ pipeline {
             }
         }
 
+        stage('Run migrations'){
+            steps {
+                sh 'php artisan migrate --force'
+             }
+        }
+
         stage('Warm up cache'){
             steps {
                 sh 'php artisan config:cache'
