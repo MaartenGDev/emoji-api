@@ -22,40 +22,34 @@ pipeline {
                 sh "sudo chown -R www-data:${PROD_USER} storage/"
             }
         }
-
         stage('Install composer dependencies'){
             steps {
                 sh 'composer install --optimize-autoloader'
             }
         }
-
         stage('Clear cache'){
             steps {
                 sh 'php artisan cache:clear'
                 sh 'php artisan config:clear'
             }
         }
-
         stage('Run migrations'){
             steps {
                 sh 'php artisan migrate:refresh --seed --force'
              }
         }
-
         stage('Warm up cache'){
             steps {
                 sh 'php artisan config:cache'
                 sh 'php artisan route:cache'
             }
         }
-
         stage('Build assets'){
             steps {
                 sh 'npm install'
                 sh 'npm run prod'
             }
         }
-
         stage('deploy'){
             steps {
                 sh "rm -rf ${DEPLOY_PATH}/*"
