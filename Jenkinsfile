@@ -37,7 +37,7 @@ pipeline {
 
         stage('Run migrations'){
             steps {
-                sh 'php artisan migrate --force'
+                sh 'php artisan migrate --seed --force'
              }
         }
 
