@@ -11,7 +11,6 @@ pipeline {
         RELEASE_DOMAIN = 'emoji-api.maartendev.me'
         DEPLOY_PATH = "/var/www/${RELEASE_DOMAIN}"
     }
-
     stages {
       stage('Configure enviroment variables for application'){
             steps {
