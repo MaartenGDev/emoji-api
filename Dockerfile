@@ -63,7 +63,6 @@ COPY . ${APACHE_DOCUMENT_ROOT}
 RUN composer install
 
 RUN cp .env.example .env \
-        && php artisan jwt:secret -f \
         && php artisan storage:link && php artisan optimize \
-        && chown -R www-data:www-data  ./storage && chmod -R 755 ./storage && chown -R www-data:www-data ./bootstrap \
+        && chown -R www-data:www-data  ./storage && chmod -R 755 ./storage && chown -R www-data:www-data ./bootstrap
 
